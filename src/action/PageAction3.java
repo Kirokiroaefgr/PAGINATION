@@ -2,7 +2,7 @@ package action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class PageActionZ extends ActionSupport {
+public class PageAction3 extends ActionSupport {
 
 	/**
 	 *  表示するページナンバー

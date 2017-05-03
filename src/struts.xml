@@ -22,7 +22,7 @@
       <result name="error">pagepage_z.jsp</result>
     </action>
 
-      <action name="PageAction3" class="action.PageActionZ"
+      <action name="PageAction3" class="action.PageAction3"
       method="execute">
       <result name="success">pagepage3.jsp</result>
       <result name="error">pagepage3.jsp</result>

@@ -39,7 +39,7 @@ public class PageAction extends ActionSupport {
 		/*
 		 *
 		 */
-		maxPage = (int) Math.ceil((double) 75 / 12);
+		maxPage = (int) Math.ceil((double) 175 / 12);
 
 		/*
 		 *   ページネーションに表示するページナンバーの最小単位計算(最低1ページ)

@@ -33,15 +33,23 @@
               <s:if test="maxPage>0">
                   <nav aria-label="Page navigation example">
                       <ul class="pagination" >
-                          <li class=" <s:if test="pageNum<=1">disabled</s:if>"><a class="first">最初のページ</a></li>
+
+                          <s:if test="pageNum<=1"><li class=' disabled'><a>最初のページへ</a></li></s:if>
+                          <s:else><li><a class="first">最初のページへ</a></li></s:else>
+
                           <s:if test="pageNum<=1"><li class=' disabled'><a>前のページへ</a></li></s:if>
                           <s:else><li><a class="back">前のページへ</a></li></s:else>
+
                           <s:iterator value="page" status="st">
                               <li class=' <s:if test="pageNum==page[#st.count-1]">active</s:if>'><a class="selectPage" ><s:property/></a></li>
                           </s:iterator>
+
                           <s:if test="maxPage<=pageNum"><li class=" disabled"><a>次のページへ</a></li></s:if>
                           <s:else><li><a class="next" >次のページへ</a></li></s:else>
-                          <li class=" <s:if test='maxPage<=pageNum'>disabled</s:if>"><a class="last" >最後のページ（<s:property value="maxPage"/>）</a></li>
+
+                          <s:if test="maxPage<=pageNum"><li class=" disabled"><a>最後のページ（<s:property value="maxPage"/>）</a></li></s:if>
+                          <s:else><li><a class="last" >最後のページ（<s:property value="maxPage"/>）</a></li></s:else>
+
                       </ul>
                   </nav>
               </s:if>
